@@ -30,7 +30,7 @@ map <int, string> start_bitch(){
     bitch_out[2] = "Приз 30 рублей!";
     bitch_out[3] = "Приз 50 рублей!";
     bitch_out[4] = "Приз 70 рублей!";
-    bitch_out[5] = "СУПЕРПРИЗ! Награда 100 рублей!";
+    bitch_out[5] = "СУПЕРПРИЗ 100 рублей!";
     
     return bitch_out;
 }
@@ -80,7 +80,7 @@ int main()
     
     
     int chances_arab[6] = {14, 6, 4, 3, 2, 1};
-    int chances_bitch[6] = {12, 7, 5, 3, 2, 1};
+    int chances_bitch[6] = {12, 7, 5, 4, 3, 2}; //{12, 7, 5, 3, 2, 1};
     
     /*DEBUG
     for(int i = 0; i <= 5; i++) cout << chances_buff[i] << "\n";
@@ -94,11 +94,11 @@ int main()
     cout << "\n";
     
     cout << "Награды наноказика\n";
-    for (int i = 0; i <= 5; i++) cout << nag_bitch[i] << " шанс: " << chances_bitch[i] << " к " << chances_buff_gen(chances_bitch)[5] << "\n";
+    for (int i = 0; i <= 5; i++) cout << nag_bitch[i] << " шанс: " << chances_bitch[i] * 100 / chances_buff_gen(chances_bitch)[5] << "%\n";
     cout << "\n";
     
     cout << "Награды АААРАБСКОГО казино\n";
-    for (int i = 0; i <= 5; i++) cout << nag_arab[i] << " шанс: " << chances_arab[i] << " к " << chances_buff_gen(chances_arab)[5] << "\n";
+    for (int i = 0; i <= 5; i++) cout << nag_arab[i] << " шанс: " << chances_arab[i] * 100 / chances_buff_gen(chances_arab)[5] << "%\n";
     cout << "\n";
     cout << "\n";
     
